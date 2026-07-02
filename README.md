@@ -1,6 +1,6 @@
 # Noblit Site
 
-This folder contains the public GitHub Pages source for Noblit's first App Store submission.
+This folder contains the public GitHub Pages source for Noblit's public homepage, privacy policy, support page, and direct macOS distribution links.
 
 It is designed to be copied to a separate public repository, for example:
 
@@ -17,7 +17,10 @@ This site is static HTML and includes `.nojekyll`, so it does not depend on a Gi
 
 Expected public paths:
 
+- `/`
 - `/privacy/`
 - `/support/`
+
+Public app downloads should be attached to releases in the public `ai-org-labs/noblit-site` repository. Keep app source in the private app repository.
 
 Only public-facing policy and support content should be copied to the public site repository. Do not copy the private app source or internal release docs unless intentionally publishing them.

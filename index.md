@@ -6,9 +6,15 @@ permalink: /
 
 # Noblit
 
-Noblit is a local-first writing and preview app for macOS.
+Noblit is a local-first writing app for turning Markdown-like text into documents, slides, tables, Mermaid diagrams, and ArchMap diagrams on macOS.
 
-## App Store Links
+## Download
+
+[Download for macOS](https://github.com/ai-org-labs/noblit-site/releases/latest)
+
+Noblit is distributed outside the Mac App Store as a Developer ID signed macOS app.
+
+## Links
 
 - [Privacy Policy](/noblit-site/privacy/)
 - [Support](/noblit-site/support/)

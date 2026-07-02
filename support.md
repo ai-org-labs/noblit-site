@@ -10,6 +10,16 @@ Noblit is a local-first macOS app for writing Markdown-like text and previewing 
 
 ## Common Questions
 
+### Where can I download Noblit?
+
+Download the latest macOS build from the Noblit public releases page:
+
+https://github.com/ai-org-labs/noblit-site/releases/latest
+
+### Is Noblit on the Mac App Store?
+
+Not yet. Noblit is distributed outside the Mac App Store as a Developer ID signed macOS app.
+
 ### Where does Noblit store files?
 
 By default, Noblit stores its workspace under:
