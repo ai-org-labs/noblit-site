@@ -14,9 +14,11 @@ Recommended GitHub Pages settings for the public site repository:
 - Branch: `main`
 - Folder: `/`
 
+This site is static HTML and includes `.nojekyll`, so it does not depend on a GitHub Pages Jekyll build.
+
 Expected public paths:
 
-- `/privacy`
-- `/support`
+- `/privacy/`
+- `/support/`
 
 Only public-facing policy and support content should be copied to the public site repository. Do not copy the private app source or internal release docs unless intentionally publishing them.
