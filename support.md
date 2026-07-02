@@ -1,3 +1,9 @@
+---
+layout: page
+title: Noblit Support
+permalink: /support/
+---
+
 # Noblit Support
 
 Noblit is a local-first macOS app for writing Markdown-like text and previewing it as documents, slides, tables, Mermaid diagrams, and ArchMap diagrams.

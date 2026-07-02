@@ -1,11 +1,17 @@
+---
+layout: page
+title: Noblit
+permalink: /
+---
+
 # Noblit
 
 Noblit is a local-first writing and preview app for macOS.
 
 ## App Store Links
 
-- [Privacy Policy](privacy.md)
-- [Support](support.md)
+- [Privacy Policy](/noblit-site/privacy/)
+- [Support](/noblit-site/support/)
 
 ## About
 

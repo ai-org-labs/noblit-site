@@ -1,3 +1,9 @@
+---
+layout: page
+title: Noblit Privacy Policy
+permalink: /privacy/
+---
+
 # Noblit Privacy Policy
 
 Last updated: 2026-07-03
@@ -62,4 +68,4 @@ Users can also remove local files from the Noblit workspace using Finder.
 
 For privacy questions, use the Noblit support page:
 
-[Noblit Support](support.md)
+[Noblit Support](/noblit-site/support/)
