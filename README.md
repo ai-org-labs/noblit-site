@@ -24,4 +24,4 @@ Expected public paths:
 
 Public app downloads should be attached to releases in the public `ai-org-labs/noblit-site` repository. Keep app source in the private app repository.
 
-Only public-facing policy and support content should be copied to the public site repository. Do not copy the private app source or internal release docs unless intentionally publishing them.
+Only public-facing static HTML should be copied to the public site repository. Do not copy the private app source or internal release docs unless intentionally publishing them.
