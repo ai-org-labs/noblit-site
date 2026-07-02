@@ -10,8 +10,9 @@ noblit-site
 
 Recommended GitHub Pages settings for the public site repository:
 
-- Source: GitHub Actions
-- Workflow: `.github/workflows/pages.yml`
+- Source: Deploy from a branch
+- Branch: `main`
+- Folder: `/`
 
 This site is static HTML and includes `.nojekyll`, so it does not depend on a GitHub Pages Jekyll build.
 
