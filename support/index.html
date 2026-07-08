@@ -4,91 +4,128 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Noblit Support</title>
+    <meta name="description" content="Help and answers for Noblit, the local-first document workbench for macOS and Windows.">
     <style>
       :root {
-        color: #172033;
-        background: #f6f7f4;
-        font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --ink: #2c2b28;
+        --ink-soft: #4a4844;
+        --muted: #8a857c;
+        --border: #e4e0d5;
+        --accent: #2b6ea5;
+        color: var(--ink);
+        background: #f7f6f2;
+        font: 16px/1.65 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
       }
-      body {
-        margin: 0;
-      }
-      main {
-        box-sizing: border-box;
+      * { box-sizing: border-box; }
+      body { margin: 0; }
+      a { color: var(--accent); }
+      .site-head {
         max-width: 820px;
         margin: 0 auto;
-        padding: 56px 28px;
+        padding: 20px 28px;
+        display: flex;
+        align-items: center;
+        gap: 9px;
       }
-      h1 {
-        margin: 0 0 8px;
-        font-size: 2.5rem;
-        letter-spacing: 0;
+      .mark {
+        width: 26px; height: 26px; border-radius: 7px;
+        background: #3a3936; color: #f7f6f2;
+        display: grid; place-items: center; font-weight: 800; font-size: 0.95rem;
       }
-      h2 {
-        margin-top: 36px;
+      .brand { font-weight: 800; font-size: 1.1rem; text-decoration: none; color: var(--ink); }
+      main {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 24px 28px 72px;
       }
-      h3 {
-        margin-top: 24px;
-      }
-      a {
-        color: #0f62b5;
-      }
-      code, pre {
-        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      }
+      h1 { margin: 0 0 10px; font-size: 2.3rem; letter-spacing: -0.01em; }
+      h2 { margin-top: 38px; font-size: 1.35rem; }
+      h3 { margin-top: 26px; font-size: 1.05rem; }
+      p, li { color: var(--ink-soft); }
+      code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
       pre {
-        border: 1px solid #d9e0e7;
+        border: 1px solid var(--border);
         border-radius: 8px;
         padding: 12px;
         background: #fff;
         overflow: auto;
       }
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 10px;
+        padding: 11px 16px;
+        border-radius: 9px;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 650;
+      }
+      .cta:hover { background: #245c8a; }
+      footer {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 24px 28px 40px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      footer a { color: var(--muted); }
     </style>
   </head>
   <body>
+    <div class="site-head">
+      <span class="mark">N</span>
+      <a class="brand" href="/noblit-site/">Noblit</a>
+    </div>
     <main>
-      <h1>Noblit Support</h1>
-      <p>Noblit is a local-first macOS app for writing Markdown-like text and previewing it as documents, slides, tables, Mermaid diagrams, and ArchMap diagrams.</p>
+      <h1>Support</h1>
+      <p>Noblit is a local-first document workbench for macOS and Windows. Write Markdown-like text and preview it as documents, slides, tables, Mermaid diagrams, and ArchMap diagrams.</p>
 
-      <h2>Common Questions</h2>
+      <h2>Common questions</h2>
+
       <h3>Where can I download Noblit?</h3>
-      <p>Download the latest macOS build from the Noblit public releases page:</p>
-      <p><a href="https://github.com/ai-org-labs/noblit-site/releases/latest">https://github.com/ai-org-labs/noblit-site/releases/latest</a></p>
+      <p>Download the latest build from the Noblit releases page and pick the asset for your platform — <code>.dmg</code> for macOS or <code>.msi</code> for Windows.</p>
+      <p>Preview builds may be self-signed or not notarized yet, so macOS or Windows can show a security warning during installation.</p>
+      <p><a class="cta" href="https://github.com/ai-org-labs/noblit-site/releases/latest">Go to latest release</a></p>
 
-      <h3>Is Noblit on the Mac App Store?</h3>
-      <p>Not yet. Noblit is distributed outside the Mac App Store as a Developer ID signed macOS app.</p>
+      <h3>Is Noblit in the app stores?</h3>
+      <p>Not yet. Noblit is distributed directly. The first preview builds are for validation; trusted Developer ID notarization and public Windows certificate signing are the next distribution hardening steps.</p>
+
+      <h3>Do I need to save my work?</h3>
+      <p>No. Noblit autosaves continuously as you type and shows a quiet <strong>Saved&nbsp;✓</strong> in the status bar. There is no Save button. If the app ever closes unexpectedly, unsaved changes can be recovered from the Library's Recovered Drafts.</p>
 
       <h3>Where does Noblit store files?</h3>
-      <p>By default, Noblit stores its workspace under:</p>
-      <pre><code>~/Noblit</code></pre>
-      <p>Saved documents are stored under:</p>
-      <pre><code>~/Noblit/documents</code></pre>
-      <p>Autosaved drafts are stored under:</p>
-      <pre><code>~/Noblit/.noblit/drafts</code></pre>
+      <p>By default, in a workspace folder in your home directory:</p>
+      <pre><code>macOS:    ~/Noblit
+Windows:  %USERPROFILE%\Noblit</code></pre>
+      <p>Documents live in the <code>documents</code> subfolder, and crash-recovery drafts in <code>.noblit/drafts</code>.</p>
 
       <h3>Does Noblit edit imported files directly?</h3>
-      <p>No. Noblit imports a copy into the Noblit workspace. The original file remains separate.</p>
+      <p>No. Noblit imports a copy into the workspace. The original file stays separate.</p>
 
-      <h3>What is the difference between Save and Export?</h3>
-      <p>Save updates the Noblit workspace document. Export creates a separate user-selected artifact, such as Markdown, HTML, or PDF.</p>
+      <h3>How do I present slides?</h3>
+      <p>Switch the preview to <strong>Slide</strong>, or press <strong>Present</strong> to open your slides in a separate window — handy for a second screen or projector. The editor and preview stay in sync.</p>
 
-      <h3>What are Autosaved Drafts?</h3>
-      <p>Autosaved Drafts are local recovery copies for unsaved work. They can be reopened from the Library.</p>
-
-      <h3>Does Noblit upload my documents?</h3>
-      <p>The MVP does not upload document content to Noblit servers and does not require an account.</p>
+      <h3>How do I get a file out of Noblit?</h3>
+      <p>Use <strong>Export</strong> to create a Markdown, HTML, or PDF file at a location you choose. Export is always an explicit action, separate from your live document.</p>
 
       <h2>Troubleshooting</h2>
       <ul>
         <li>If import does not work, confirm the file is a readable text file.</li>
         <li>If export does not appear, choose a writable location in the save dialog.</li>
         <li>If diagrams do not render, check the Mermaid or ArchMap syntax in the source text.</li>
-        <li>If you want to remove Noblit data, delete the <code>~/Noblit</code> workspace folder after closing the app.</li>
+        <li>To remove Noblit data, close the app and delete the <code>Noblit</code> workspace folder in your home directory.</li>
       </ul>
 
       <h2>Contact</h2>
       <p>For support, open an issue in the Noblit public site repository:</p>
-      <p><a href="https://github.com/ai-org-labs/noblit-site/issues">https://github.com/ai-org-labs/noblit-site/issues</a></p>
+      <p><a href="https://github.com/ai-org-labs/noblit-site/issues">github.com/ai-org-labs/noblit-site/issues</a></p>
     </main>
+    <footer>
+      <a href="/noblit-site/">Home</a> · <a href="/noblit-site/privacy/">Privacy</a>
+    </footer>
   </body>
 </html>

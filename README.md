@@ -1,26 +1,39 @@
 # Noblit Site
 
-This folder contains the public GitHub Pages source for Noblit's public homepage, privacy policy, support page, and direct macOS distribution links.
+Public GitHub Pages source for Noblit's homepage, privacy policy, and support page, plus the direct download links for the signed macOS and Windows desktop builds.
 
-It is designed to be copied to a separate public repository, for example:
+This folder is copied to the separate public repository:
 
 ```text
-noblit-site
+ai-org-labs/noblit-site
 ```
 
-Recommended GitHub Pages settings for the public site repository:
+Regenerate it from the app repo with:
+
+```sh
+npm run site:prepare   # copies site/ to ../noblit-site
+```
+
+## GitHub Pages settings (public repo)
 
 - Source: GitHub Actions
 - Workflow: `.github/workflows/pages.yml`
 
-This site is static HTML and includes `.nojekyll`, so it does not depend on a GitHub Pages Jekyll build.
+This site is static HTML and includes `.nojekyll`, so it does not depend on a Jekyll build.
 
-Expected public paths:
+Public paths:
 
-- `/`
+- `/` — homepage
 - `/privacy/`
 - `/support/`
 
-Public app downloads should be attached to releases in the public `ai-org-labs/noblit-site` repository. Keep app source in the private app repository.
+## Downloads
 
-Only public-facing static HTML should be copied to the public site repository. Do not copy the private app source or internal release docs unless intentionally publishing them.
+App builds are produced by the app repo's release GitHub Actions (macOS `.dmg`, Windows `.msi`) and attached to releases in `ai-org-labs/noblit-site`. The site's download buttons link to `releases/latest`, where visitors pick the asset for their platform.
+
+Distribution states:
+
+- Preview: self-signed Windows and unnotarized macOS artifacts. These must be marked as prerelease and may show platform security warnings.
+- Public trusted: macOS Developer ID signed and notarized, plus trusted Windows code signing.
+
+Keep the app source in the private app repository. Only public-facing static HTML belongs here.
