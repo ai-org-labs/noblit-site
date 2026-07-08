@@ -29,7 +29,7 @@ Public paths:
 
 ## Downloads
 
-App builds are produced by the app repo's release GitHub Actions (macOS `.dmg`, Windows `.msi`) and attached to releases in `ai-org-labs/noblit-site`. The site's download buttons link to `releases/latest`, where visitors pick the asset for their platform.
+App builds are produced by the app repo's release GitHub Actions (macOS `.dmg`, Windows `.msi`) and attached to releases in `ai-org-labs/noblit-site`. While the public build is a prerelease self-signed preview, the site's download buttons link directly to the release tag instead of `releases/latest`.
 
 Distribution states:
 
